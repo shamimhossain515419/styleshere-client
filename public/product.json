@@ -1,0 +1,80 @@
+[
+     {
+          "id": 1,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/WDJqQ5v",
+          "img2": "https://ibb.co/n35vyST",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 90,
+          "category":"bestSeller"
+     },
+     {
+          "id": 2,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/JvHgRq0",
+          "img2": "https://ibb.co/x80FJwh",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 80,
+          "category":"sale"
+     }
+     ,
+     {
+          "id": 3,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/kSGXsj9",
+          "img2": "https://ibb.co/ncsb3Qb",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 80,
+          "category":"bestSeller"
+     }
+     ,
+     {
+          "id": 4,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/LPGQmtq",
+          "img2": "https://ibb.co/h7jN9x9",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 60,
+          "category":"trending"
+     }
+     ,
+     {
+          "id": 5,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/7G8qdgc",
+          "img2": "https://ibb.co/Rz4Wxrt",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 45,
+          "category":"trending"
+     }
+     ,
+     {
+          "id": 6,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/7G8qdgc",
+          "img2": "https://ibb.co/JBdNYgx",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 40,
+          "category":"sale"
+     }
+     ,
+     {
+          "id": 7,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/nbnXf0w",
+          "img2": "https://ibb.co/WgVDJZC",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 80,
+          "category":"trending"
+     }
+     ,
+     {
+          "id":8,
+          "name": "Ethereal Elegance Dress",
+          "img1": "https://ibb.co/fG7qPJp",
+          "img2": "https://ibb.co/0yLFFXb",
+          "description": " A captivating dress that exudes a dreamy and ethereal vibe, perfect for special occasions.halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events. A halter neck dress featuring serene colors, reminiscent of a beautiful sunrise, ideal for beach vacations and summer events.",
+          "price": 70,
+          "category":"trending"
+     }
+]

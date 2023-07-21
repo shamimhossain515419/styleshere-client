@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textColor{
+     color: #222222;
+}
+
+.title_bar {
+     width: 200px;
+     height: 5px;
+     margin: auto;
+     margin-bottom: 20px;
+     background: #111111;
+     -webkit-transform: skew(-30deg);
+     -moz-transform: skew(-30deg);
+     -o-transform: skew(-30deg);
+     transform: skew(-30deg);
+   
+   }
