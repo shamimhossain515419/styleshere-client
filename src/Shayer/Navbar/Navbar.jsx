@@ -1,11 +1,14 @@
 
-import { useState } from 'react'
-import { AiOutlineHeart, AiOutlineShopping } from 'react-icons/ai';
+import { useContext, useState } from 'react'
+import { AiOutlineHeart, AiOutlineHome, AiOutlineSetting, AiOutlineShopping } from 'react-icons/ai';
 import { FaBars, FaRegUserCircle } from 'react-icons/fa';
 import { NavLink, Link } from 'react-router-dom'
+import { AuthContact } from '../../Route/AuthProvider';
+import { FiLogIn } from 'react-icons/fi';
 const Navbar = () => {
      const [toggleMenu, setToggleMenu] = useState(false);
-
+     const [Open, setOpen] = useState(false)
+     const { user } = useContext(AuthContact)
      return (
           <div >
                <nav>
@@ -37,16 +40,36 @@ const Navbar = () => {
                               <div className="flex gap-6">
                                    <div className="hidden  sm:flex items-center gap-10">
                                         <div className="hidden   lg:flex items-center gap-4">
-                                        <AiOutlineHeart className="h-6 w-6 cursor-pointer" />
+                                             <AiOutlineHeart className="h-6 w-6 cursor-pointer" />
+                                             {
+                                                  user ? <img onClick={() => setOpen(!Open)} className=' cursor-pointer h-10 w-10 rounded-full ' src={user?.photoURL} /> : <FaRegUserCircle className="h-6 w-6  cursor-pointer" />
+                                             }
 
-                                        <FaRegUserCircle className="h-6 w-6  cursor-pointer" />
 
 
 
-                                        <AiOutlineShopping className="h-6 w-6 cursor-pointer" />
+                                             <AiOutlineShopping className="h-6 w-6 cursor-pointer" />
 
                                         </div>
-                                       </div>
+
+                                   </div>
+                                   {
+                                        Open ? <div className='bg-[#FFF]  translate-y-2 duration-300  absolute  textColor top-20 z-50   py-3 px-8 rounded-md '>
+                                             <Link onClick={() => setOpen(false)} to={'/dashboard'} className='  hover:text-blue-500 my-2 flex gap-2 items-center'>
+                                                  <AiOutlineHome size={24}></AiOutlineHome>
+                                                  <h2 className=' text-xl font-semibold'> Dashboard</h2>
+                                             </Link>
+                                             <hr />
+                                             <Link onClick={() => setOpen(false)} className='my-2 hover:text-blue-500 flex gap-2 items-center'>
+                                                  <AiOutlineSetting size={24}></AiOutlineSetting>
+                                                  <h2 className=' text-xl font-semibold'> Setting</h2>
+                                             </Link>
+                                             <Link onClick={() => setOpen(false)} className='my-4 hover:text-blue-500 flex gap-2 items-center'>
+                                                  <FiLogIn size={24}></FiLogIn>
+                                                  <h2 className=' text-xl font-semibold'> Logout </h2>
+                                             </Link>
+                                        </div> : ""
+                                   }
                                    {/* Mobile navigation toggle */}
                                    <div className="lg:hidden flex items-center">
                                         <button onClick={() => setToggleMenu(!toggleMenu)}>
@@ -71,7 +94,7 @@ const Navbar = () => {
                                    <NavLink href="#" className=" textColor text-xl">Blog</NavLink>
                                    <div className="  flex   flex-col gap-4">
                                         <div className=" flex    gap-4">  <AiOutlineHeart className="h-6 w-6 cursor-pointer" /> <h1 className=" textColor text-xl"> Bookmark</h1></div>
-                                        <div className="  flex     gap-4"> <FaRegUserCircle className="h-6 w-6 cursor-pointer" />  <h1 className=" textColor text-xl"> Login</h1></div>
+                                        <div className="  flex     gap-4">  <FaRegUserCircle className="h-6 w-6 cursor-pointer" />  <h1 className=" textColor text-xl"> Login</h1></div>
                                         <div className="  flex    gap-4"> <AiOutlineShopping className="h-6 w-6 cursor-pointer" />  <h1 className=" textColor text-xl"> Card</h1></div>
 
                                    </div>

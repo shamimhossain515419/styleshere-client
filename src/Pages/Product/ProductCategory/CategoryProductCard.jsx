@@ -1,16 +1,13 @@
-import { useState } from 'react';
-import './Trending.css'
-import { Rating } from '@smastrom/react-rating'
+import { Rating } from "@smastrom/react-rating";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-import '@smastrom/react-rating/style.css'
-import { Link } from 'react-router-dom';
-
-const TrendingCard = ({ product }) => {
-
-     const [Open, setOpen] = useState(false)
+const CategoryProductCard = ({product}) => {
+     const [ Open,setOpen]=useState(false);
      const { img1, img2, name, rating, description, category, price, _id } = product;
      return (
-          <div className=' hover:shadow-xl  hover:p-2 rounded'>
+          <div>
+                  <div className=' shadow rounded'>
                <div>
                     <div onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)} className="product h-[400px]  relative cursor-pointer ">
                          <div className="product-img h-[400px]   object-cover overflow-hidden">
@@ -19,21 +16,22 @@ const TrendingCard = ({ product }) => {
 
 
                          </div>
-                         <Link to={`/addcard/${_id}`} className={` ${Open ? "block" : "hidden "}   absoluteButton min-w-[200px]  top-[60%] duration-700  translate   origin-top  text-xl font-bold border-2 border-[#43a4ea] px-8 py-[5px] rounded-2xl hover:bg-[#43a4ea] hover:border-none hover:text-white`}>Add to card</Link>
+                         <Link  to={`/addcard/${_id}`} className={` ${Open ? "block" : "hidden "}   absoluteButton min-w-[200px]  top-[60%] duration-700  translate   origin-top  text-xl font-bold border-2 border-[#43a4ea] px-8 py-[5px] rounded-2xl hover:bg-[#43a4ea] hover:border-none hover:text-white`}>Add to card</Link>
                     </div>
                     <div className=' p-2 '>
-                         <h3 className=' textColor text-xl font-medium'>{name} </h3>
+                         <h3 className=' textColor text-xl font-medium'>{name}</h3>
                          <Rating
                               style={{ maxWidth: 100 }}
                               value={rating}
                               readOnly
                          />
-                         <p  className=' text-xl textColor font-medium'>  $ {  price}.00 </p>
+                         <p  className=' text-xl textColor font-medium'>  $ { price}.00 </p>
                     </div>
 
                </div>
           </div>
+          </div>
      );
 };
 
-export default TrendingCard;
+export default CategoryProductCard;

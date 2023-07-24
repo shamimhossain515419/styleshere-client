@@ -1,24 +1,22 @@
 
-
-import { useQuery } from '@tanstack/react-query';
 import { useLoaderData } from 'react-router-dom';
- import axios from 'axios'
-import TrendingCard from '../../TrindingProduct/TrendingCard';
+import CategoryProductCard from './CategoryProductCard';
+
 const ProductCategory = () => {
      const contacts  = useLoaderData();
-     const { data, refetch, isLoading } = useQuery({
-          queryKey: ['product'],
-          queryFn: () => axios.get('http://localhost:5000/product')
-     })
-     
-     const Product = data?.data;
-     console.log(Product);
+
+ 
      console.log(contacts);
      return (
-          <div>
+          <div className=' my-10'>
                {
-                     contacts ?<div> {contacts?.map(item=> <TrendingCard key={item._id} product={item}></TrendingCard>)} </div> : <div> {Product?.map(item=> <TrendingCard key={item._id} product={item}></TrendingCard>)} </div> 
+                contacts && <div className=' grid md:grid-cols-3 gap-5 '> {contacts?.map(item=> <CategoryProductCard key={item._id} product={item}></CategoryProductCard>)} </div> 
                }
+
+
+               <div>
+            
+               </div>
               
           </div>
      );
