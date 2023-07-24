@@ -4,6 +4,8 @@ import Product from "../../Product/Product";
 import Trending from "../../TrindingProduct/Trinding";
 
 import Banner from "../Bannar/Bannar";
+import Follow from "../Follow/Foollow";
+import HappyCustomer from "../HappyCustomar/HappyCustomar";
 
 const Home = () => {
      return (
@@ -14,6 +16,10 @@ const Home = () => {
              <Product></Product>
 
              <OfferPage></OfferPage>
+
+             <HappyCustomer></HappyCustomer>
+
+             <Follow></Follow>
           </div>
      );
 };

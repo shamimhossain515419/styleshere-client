@@ -21,7 +21,7 @@ const DashboardNavbar = () => {
                     <AiOutlineHome size={24}></AiOutlineHome>
                     <h2 className=' text-xl font-semibold'> Dashboard</h2>
                </NavLink>
-               <NavLink to={'/about'} className={({ isActive }) => isActive ? 'mt-2   my-4 flex gap-2 items-center text-blue-500' : 'mt-2   my-4 flex gap-2 items-center'}>
+               <NavLink to={'/'} className={({ isActive }) => isActive ? 'mt-2   my-4 flex gap-2 items-center text-blue-500' : 'mt-2   my-4 flex gap-2 items-center'}>
                     <MdRoundaboutRight size={24}></MdRoundaboutRight>
                     <h2 className=' text-xl font-semibold'> About</h2>
                </NavLink>
@@ -36,7 +36,7 @@ const DashboardNavbar = () => {
                </NavLink>
                <h1 className='  my-5  text-xl font-medium'> Product</h1>
                <hr />
-               <NavLink to={'/'}    to={'/'}  className={({ isActive }) => isActive ? 'mt-5   my-4 flex gap-2 items-center text-blue-500' : 'mt-5   my-4 flex gap-2 items-center'}>
+               <NavLink to={'/'}     className={({ isActive }) => isActive ? 'mt-5   my-4 flex gap-2 items-center text-blue-500' : 'mt-5   my-4 flex gap-2 items-center'}>
                     <AiOutlineShopping size={24}></AiOutlineShopping>
                     <h2 className=' text-xl font-semibold'> Shopping</h2>
                </NavLink>
