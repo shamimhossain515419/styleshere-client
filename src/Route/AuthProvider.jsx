@@ -34,20 +34,8 @@ const AuthProvider = ({ children }) => {
           const unsubcript = onAuthStateChanged(auth, currentUser => {
                setUser(currentUser)
                console.log(currentUser);
-               // if (currentUser?.email) {
-               //      axios.post('https://music-school-server.vercel.app/jwt')
-               //      .then(data=>{
-               //            localStorage.setItem('access-token', data.data.token)
-               //      }).catch(error=>{
-               //            console.log(error);
-               //      })
-               //      setLoading(false)
-               // } else {
-               //      localStorage.removeItem('access-token')
-               // }
-             
-
-          })
+            
+           })
           return () => {
                unsubcript()
           }

@@ -8,11 +8,16 @@ import Register from "../Account/Ragister/Register";
 import Dashboard from "../Pages/Dashoard/Dashboard/Dashboard";
 import DashboardAddCard from "../Pages/Dashoard/AddCard/DashboardAddCard";
 import DashboardHome from "../Pages/Dashoard/Dashboard/DashboardHome";
+import ErrorPage from "../Errorpage/Errorpage";
+import Payment from "../Pages/payment/payment";
+import Product from "../Pages/Product/Product";
+import Trending from "../Pages/TrindingProduct/Trinding";
 
 const Route = createBrowserRouter([
       {
             path: '/',
             element: <Main></Main>,
+            errorElement:<ErrorPage></ErrorPage>,
             children: [
                   {
                         path: '/',
@@ -21,14 +26,19 @@ const Route = createBrowserRouter([
                               {
                                     path: '/product/:category',
                                     element: <ProductCategory></ProductCategory>,
-                                    loader: ({ params }) => fetch(`http://localhost:5000/product/${params.category ? params.category : 'bestSeller'}`)
-                              }
+                                    loader: ({ params }) => fetch(`https://styleshere-server-site.vercel.app/product/${params.category ? params.category : 'bestSeller'}`)
+                              },
+                              
                         ]
+                  },
+                  {
+                        path:'/trending',
+                        element:<Trending></Trending>
                   },
                   {
                         path: 'addcard/:id',
                         element: <AddCard></AddCard>,
-                        loader: ({ params }) => fetch(`http://localhost:5000/product/addcard/${params.id}`)
+                        loader: ({ params }) => fetch(`https://styleshere-server-site.vercel.app/product/addcard/${params.id}`)
                   },
                   {
                         path: '/login',
@@ -51,6 +61,12 @@ const Route = createBrowserRouter([
                               {
                                     path: '/dashboard/addcard',
                                     element: <DashboardAddCard></DashboardAddCard>
+                              }
+                              ,
+                              {
+                                    path: '/dashboard/payment/:id',
+                                    element: <Payment></Payment>,
+                                    loader:({params}) => fetch(`http://localhost:5000/addcard/${params.id}`)
                               }
                         ]
                   }

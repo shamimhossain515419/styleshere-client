@@ -10,7 +10,7 @@ const HappyCustomer = () => {
           fetch('happycustomer.json').then(res => res.json()).then(data => {
                setFeedback(data)
           })
-     })
+     }, [])
 
      console.log(feedback);
      return (

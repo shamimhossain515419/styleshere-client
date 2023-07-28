@@ -1,16 +1,11 @@
-import { useQuery } from "@tanstack/react-query";
+
 import Title from "../../Components/Title/Tittle";
-import axios from 'axios'
+
 import { Outlet, NavLink } from "react-router-dom";
 import Container from "../../Components/Container/Container";
 const Product = () => {
 
-     // const { data, refetch, isLoading } = useQuery({
-     //      queryKey: ['product'],
-     //      queryFn: () => axios.get('http://localhost:5000/product')
-     // })
-
-     // const Product = data?.data;
+ 
 
      return (
           <div className=" mt-9">

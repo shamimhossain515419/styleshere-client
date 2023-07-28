@@ -1,7 +1,8 @@
 import Container from "../../Components/Container/Container";
 import { BsFacebook, BsInstagram, BsGoogle } from 'react-icons/bs'
-import { AiFillGithub ,AiOutlineMail,AiOutlineArrowRight} from 'react-icons/ai'
+import { AiFillGithub} from 'react-icons/ai'
 const Footer = () => {
+     
      return (
           <div className=" bg-[#191818] text-white py-14">
                <Container>

@@ -4,7 +4,7 @@ import toast, { Toaster } from 'react-hot-toast';
 import { IoMdPhotos } from 'react-icons/io'
 import { AuthContact } from "../../Route/AuthProvider";
 import { useState } from 'react'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const Register = () => {
      const { CreateUser, updateProfilePhoto } = useContext(AuthContact)
      const [passwordShow, setPasswordShow] = useState(false);
@@ -103,6 +103,8 @@ const Register = () => {
                                    <div className=" w-full my-2 text-start">
                                         <button className='   block w-full text-center text-xl font-bold border-2 border-none mt-7 px-8 py-[5px] rounded-2xl  bg-[#43a4ea] hover:border-none text-white'>Register</button>
                                    </div>
+                                   <Link to={'/login'} className=' text-2xl font-medium  my-3 text-[#1932ee]'>login</Link>
+
                               </form>
                          </div>
                     </div>

@@ -7,7 +7,7 @@ import TrendingCard from "./TrendingCard";
 const Trending = () => {
      const { data, refetch, isLoading } = useQuery({
           queryKey: ['product'],
-          queryFn: () => axios.get('http://localhost:5000/product')
+          queryFn: () => axios.get('https://styleshere-server-site.vercel.app/product')
      })
      
      const Product = data?.data;

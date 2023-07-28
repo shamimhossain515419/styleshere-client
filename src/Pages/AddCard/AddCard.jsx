@@ -5,10 +5,12 @@ import { useContext, useState } from 'react';
 import { AuthContact } from "../../Route/AuthProvider";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import addcardApi from "../../Components/ApI/addcardApi";
 
 const AddCard = () => {
      const data = useLoaderData();
      const navigate=useNavigate()
+     const [Product, refetch, isLoading] = addcardApi();
      const { user } = useContext(AuthContact);
      const { img1, img2, name, rating, description, category, price, _id } = data;
 
@@ -26,10 +28,11 @@ const AddCard = () => {
      const AddCardData = { img1, email: user?.email, quantity: parseInt(count), name, TotalPrice: price * parseInt(count) }
      const handleAddCard = () => {
           console.log(AddCardData);
-          axios.post('http://localhost:5000/addcard', { AddCardData })
+          axios.post('https://styleshere-server-site.vercel.app/addcard', { AddCardData })
                .then((response) => {
                     if (response) {
                          navigate('/')
+                         refetch();
                          toast.success('Successfully Add Card')
                     }
                     console.log('Post request successful:', response);
