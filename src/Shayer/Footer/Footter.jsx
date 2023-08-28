@@ -7,18 +7,18 @@ const Footer = () => {
           <div className=" bg-[#191818] text-white py-14">
                <Container>
                     <div className=" grid md:grid-cols-5 gap-4 ">
-                         <div className=" col-span-2 px-3">
+                         <div className=" md:col-span-2 px-3">
                               <h1 className=" text-xl  my-4  space-x-3 font-semibold  uppercase "> Don’t miss a thing</h1>
                               <p className=" text-base my-2 font-medium"> Enter your email below to be the first to know about new collections and product launches.</p>
 
-                              <div className=" px-2 mt-3 rounded-xl bg-[#262323] relative flex  items-center justify-between"> 
-                               <div className="  relative ">
-                                        <input   className= "  w-full  py-1 px-4 bg-[#262323]   outline-none" type="text" placeholder=" Type massage" />
+                              <div className=" px-2  overflow-hidden  mt-3 rounded-xl bg-[#262323] relative flex  items-center justify-between"> 
+                               <div className="  relative  ">
+                                        <input   className= "   py-1 px-4 bg-[#262323]   outline-none" type="text" placeholder=" Type massage" />
                                    </div>
                             
                               </div>
                          </div>
-                         <div>
+                         <div  className=" col-span-1">
                               <h1 className=" text-xl font-bold my-4">  Company</h1>
                               <p>  Find a location nearest you.</p>
                               <p>  See Our Stores</p>
@@ -27,7 +27,7 @@ const Footer = () => {
                               <p>   +391 (0)35 2568 4593</p>
                               <p> hello@domain.com</p>
                          </div>
-                         <div>
+                         <div className=" col-span-1">
                               <h1 className=" text-xl font-bold my-4"> Information</h1>
                               <div className="flex flex-col gap-1">
                                    <a href=" "> My account</a>
@@ -37,7 +37,7 @@ const Footer = () => {
                                    <a href=""> Privacy Policy</a>
                               </div>
                          </div>
-                         <div>
+                         <div className="col-span-1 ">
                               <h1 className=" text-xl font-bold my-4"> Social Media
                               </h1>
                               <div className=" flex  gap-4 items-center">

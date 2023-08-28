@@ -37,7 +37,7 @@ const Navbar = () => {
 
                                              <h1 className=' text-xl  md:text-3xl font-bold uppercase'>StyleSphere</h1 >
                                         </NavLink>
-                                   </div>
+                                    </div>
                                    {/* primary */}
                                    <div className="hidden lg:flex gap-8 ">
                                         <NavLink href="#" className=" textColor text-xl">
@@ -111,6 +111,7 @@ const Navbar = () => {
                                    <NavLink href="#" className=" textColor text-xl">Shopping</NavLink>
                                    <NavLink href="#" className=" textColor text-xl">Product</NavLink>
                                    <NavLink href="#" className=" textColor text-xl">Blog</NavLink>
+                                   <NavLink to={'/dashboard'} className=" textColor text-xl">Dashboard</NavLink>
                                    <div className="  flex   flex-col gap-4">
                                         <div className=" flex    gap-4">  <AiOutlineHeart className="h-6 w-6 cursor-pointer" /> <h1 className=" textColor text-xl"> Bookmark</h1></div>
                                         <Link onClick={()=>setOpen(false)} to={'/login'} className="  flex     gap-4">  <FaRegUserCircle className="h-6 w-6 cursor-pointer" />  <h1 className=" textColor text-xl"> Login</h1></Link>

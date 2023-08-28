@@ -45,7 +45,7 @@ const DashboardNavbar = () => {
                     <h2 className=' text-xl font-semibold'> Bookmark</h2>
                </NavLink>
                <p> </p>
-               <NavLink to={'/'}  className={({ isActive }) => isActive ? 'mt-2   my-4 flex gap-2 items-center text-blue-500' : 'mt-2   my-4 flex gap-2 items-center'}>
+               <NavLink to={'/dashboard/payment'}  className={({ isActive }) => isActive ? 'mt-2   my-4 flex gap-2 items-center text-blue-500' : 'mt-2   my-4 flex gap-2 items-center'}>
                     <GiPayMoney size={24}></GiPayMoney>
                     <h2 className=' text-xl font-semibold'> Payment Histroy</h2>
                </NavLink>

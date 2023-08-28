@@ -4,12 +4,13 @@ import Title from "../../Components/Title/Tittle";
 import './Trending.css'
 import axios from "axios";
 import TrendingCard from "./TrendingCard";
+import Loading from "../../Components/Loading/Loading";
 const Trending = () => {
      const { data, refetch, isLoading } = useQuery({
           queryKey: ['product'],
           queryFn: () => axios.get('https://styleshere-server-site.vercel.app/product')
      })
-     
+
      const Product = data?.data;
 
      return (
@@ -18,14 +19,16 @@ const Trending = () => {
 
 
                <Container>
+                    {
+                         Product?.length > 0 ? <> <div className=" mt-10">
+                              <div className="  grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-5">
+                                   {
+                                        Product?.slice(0, 8)?.map(item => <TrendingCard key={item._id} product={item}></TrendingCard>)
+                                   }
+                              </div>
+                         </div></> : <> <Loading></Loading></>
+                    }
 
-                    <div className=" mt-10">
-                         <div className="  grid grid-cols-1  md:grid-cols-3 lg:grid-cols-4 gap-5">
-                              {
-                                   Product?.slice(0,8)?.map(item => <TrendingCard key={item._id} product={item}></TrendingCard>)
-                              }
-                         </div>
-                    </div>
 
 
                </Container>

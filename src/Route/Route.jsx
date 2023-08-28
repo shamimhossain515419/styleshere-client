@@ -9,15 +9,16 @@ import Dashboard from "../Pages/Dashoard/Dashboard/Dashboard";
 import DashboardAddCard from "../Pages/Dashoard/AddCard/DashboardAddCard";
 import DashboardHome from "../Pages/Dashoard/Dashboard/DashboardHome";
 import ErrorPage from "../Errorpage/Errorpage";
-import Payment from "../Pages/payment/payment";
-import Product from "../Pages/Product/Product";
 import Trending from "../Pages/TrindingProduct/Trinding";
+import SuccessPay from "../Pages/SuccessPay/SuccessPay";
+import FailPay from "../Pages/FailPay/FailPay";
+import PaymentHistory from "../Pages/Dashoard/paymentHistory/PaymentHistory";
 
 const Route = createBrowserRouter([
       {
             path: '/',
             element: <Main></Main>,
-            errorElement:<ErrorPage></ErrorPage>,
+            errorElement: <ErrorPage></ErrorPage>,
             children: [
                   {
                         path: '/',
@@ -28,12 +29,12 @@ const Route = createBrowserRouter([
                                     element: <ProductCategory></ProductCategory>,
                                     loader: ({ params }) => fetch(`https://styleshere-server-site.vercel.app/product/${params.category ? params.category : 'bestSeller'}`)
                               },
-                              
+
                         ]
                   },
                   {
-                        path:'/trending',
-                        element:<Trending></Trending>
+                        path: '/trending',
+                        element: <Trending></Trending>
                   },
                   {
                         path: 'addcard/:id',
@@ -48,6 +49,16 @@ const Route = createBrowserRouter([
                         path: '/register',
                         element: <Register></Register>
                   },
+                  {
+                        path: '/payment/success/:Id',
+                        element: <SuccessPay></SuccessPay>,
+
+                  },
+                  {
+                        path: '/payment/fail/:Id',
+                        element: <FailPay></FailPay>,
+
+                  },
 
                   {
                         path: '/dashboard',
@@ -55,7 +66,7 @@ const Route = createBrowserRouter([
                         children: [
                               {
                                     path: '/dashboard',
-                                    element:<DashboardHome></DashboardHome>
+                                    element: <DashboardHome></DashboardHome>
                               }
                               ,
                               {
@@ -64,10 +75,11 @@ const Route = createBrowserRouter([
                               }
                               ,
                               {
-                                    path: '/dashboard/payment/:id',
-                                    element: <Payment></Payment>,
-                                    loader:({params}) => fetch(`http://localhost:5000/addcard/${params.id}`)
+                                    path: '/dashboard/payment',
+                                    element: <PaymentHistory></PaymentHistory>
                               }
+                              
+                        
                         ]
                   }
             ]

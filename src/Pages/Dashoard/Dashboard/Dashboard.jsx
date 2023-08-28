@@ -8,7 +8,7 @@ const Dashboard = () => {
      return (
           <div className=" p-3 xl:px-4">
                <div className=" flex gap-3  ">
-                    <div className=" bg-[#aca6a696] md:h-[85vh] p-2 md:min-w-[300px] xl:min-w-[350px]">
+                    <div className=" hidden md:block bg-[#aca6a696] md:h-[85vh] p-2 md:min-w-[300px] xl:min-w-[350px]">
                     <DashboardNavbar></DashboardNavbar>
 
                     </div>
